@@ -45,10 +45,10 @@ class _imageListViewState extends State<imageListView> {
         height: MediaQuery.of(context).size.height * 0.60,
         child: ListView.builder(
           controller: _ScrollController,
-          itemCount: 5,
+          itemCount: widget.imageurl.length,
           itemBuilder: (context, index) {
             return CachedNetworkImage(
-              imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUQJvsNuZMoWJBXaBwTojK9FclM48f31RkA&usqp=CAU',
+              imageUrl:widget.imageurl[index],
               imageBuilder: (context, imageProvider) {
                 return Container(
                   margin: const EdgeInsets.only(left: 8.0, right: 8.0, top: 10),
@@ -62,6 +62,11 @@ class _imageListViewState extends State<imageListView> {
                   ),
                 );
               },
+              placeholder: (contet,url)=>Center(child: CircularProgressIndicator(),),
+              errorWidget: (context,url,provider)=>Center(child: Icon(
+                Icons.error,
+                size: 20,
+              ),),
             );
           },
         ),

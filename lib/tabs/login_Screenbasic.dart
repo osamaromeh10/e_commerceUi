@@ -5,17 +5,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Login extends StatelessWidget {
-  var EmailController = TextEditingController();
-  var PasswordController = TextEditingController();
+class Login extends StatefulWidget {
   static const String routeName = "login";
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  var EmailController = TextEditingController();
+
+  var PasswordController = TextEditingController();
+
   var Formkey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        extendBodyBehindAppBar: true,
         body: SingleChildScrollView(
           child: Column(children: [
             Stack(alignment: Alignment.topCenter, children: [

@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       child: Scaffold(
         backgroundColor: Colors.grey.shade300,
         appBar: AppBar(
+          leading: Image.asset("assets/images/logo.png"),
             iconTheme: const IconThemeData(color: Colors.black),
             title: Text(
               "Name App",
