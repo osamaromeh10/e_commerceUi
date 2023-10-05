@@ -1,5 +1,5 @@
-import 'package:ecommerce_ui/tabs/card_Shooping_Screen.dart';
-import 'package:ecommerce_ui/tabs/fav_Screen.dart';
+import 'package:ecommerce_ui/tabs/ScreenTwoExam.dart';
+import 'package:ecommerce_ui/tabs/ScreenOneExam.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,8 +21,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   int selectedvalue = 0;
   List<Widget> screens = [
     HomeScreen(),
-    FavScreen(),
-    cardShoopingScreen(),
+    ScreenOneExam(),
+    ScreenTwoExam(),
 
   ];
   List<String> aseets = [

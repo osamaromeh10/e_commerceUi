@@ -2,8 +2,8 @@
 import 'package:ecommerce_ui/tabs/home_Screen.dart';
 import 'package:ecommerce_ui/tabs/intro_Screen.dart';
 import 'package:ecommerce_ui/tabs/login_Screenbasic.dart';
-import 'package:ecommerce_ui/tabs/card_Shooping_Screen.dart';
-import 'package:ecommerce_ui/tabs/fav_Screen.dart';
+import 'package:ecommerce_ui/tabs/ScreenTwoExam.dart';
+import 'package:ecommerce_ui/tabs/ScreenOneExam.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,13 +25,13 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            initialRoute: "favscreen",
+            initialRoute: "ScreenTwoExam",
             routes: {
               IntroScreen.routeName: (context) => IntroScreen(),
               Login.routeName: (context) => Login(),
               HomeScreen.routeName: (context) => HomeScreen(),
-              FavScreen.routeName: (context) => FavScreen(),
-              cardShoopingScreen.routeName: (context) => cardShoopingScreen(),
+              ScreenOneExam.routeName: (context) => ScreenOneExam(),
+              ScreenTwoExam.routeName: (context) => ScreenTwoExam(),
             },
           );
         });
